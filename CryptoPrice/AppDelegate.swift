@@ -50,14 +50,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         let myString: String = self.coinNames[self.pos] + " " + String(format: formatString, newPrice)
                         if newPrice > self.oldPrice {
                             let myAttributes: [NSAttributedString.Key: Any] = [
-                                .font: NSFont(name: "HelveticaNeue", size: 14),
+                                .font: NSFont(name: "HelveticaNeue", size: 14) as Any,
                                 .foregroundColor: NSColor(red: 30.0/255.0, green: 196.0/255.0, blue: 110.0/255.0, alpha: 1.0)
                             ]
                             let myAttrString = NSAttributedString(string: myString, attributes: myAttributes)
                             button.attributedTitle = myAttrString
                         } else if newPrice < self.oldPrice {
                             let myAttributes: [NSAttributedString.Key: Any] = [
-                                .font: NSFont(name: "HelveticaNeue", size: 14),
+                                .font: NSFont(name: "HelveticaNeue", size: 14) as Any,
                                 .foregroundColor: NSColor(red: 241.0/255.0, green: 44.0/255.0, blue: 75.0/255.0, alpha: 1.0)
                             ]
                             let myAttrString = NSAttributedString(string: myString, attributes: myAttributes)
